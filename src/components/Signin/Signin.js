@@ -18,8 +18,8 @@ class Signin extends React.Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("https://infinite-ocean-88506.herokuapp.com/signin", {
-      method: "post",
+    fetch(" your server URL ", {
+      method: "",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: this.state.signInEmail,

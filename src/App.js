@@ -86,8 +86,8 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("https://infinite-ocean-88506.herokuapp.com/imageurl", {
-      method: "post",
+    fetch(" your server URL ", {
+      method: " the req method for the server ",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         input: this.state.input,
@@ -96,8 +96,8 @@ class App extends Component {
       .then((res) => res.json())
       .then((response) => {
         if (response) {
-          fetch("https://infinite-ocean-88506.herokuapp.com/image", {
-            method: "put",
+          fetch(" your server URL ", {
+            method: " the req method for the server ",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               id: this.state.user.id,
@@ -105,7 +105,7 @@ class App extends Component {
           })
             .then((response) => response.json())
             .then((count) => {
-              this.setState(Object.assign(this.state.user, { entries: count }));
+              this.setState(Object.assign(this.state.user, { entries: count })); // To dynamically update the users faces found count.
             });
         }
         this.displayFaceBox(this.findFaceLocation(response)); // Find the face location and then pass it to the box function to update the state (higher order function)

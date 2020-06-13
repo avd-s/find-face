@@ -25,8 +25,8 @@ class Register extends React.Component {
   // send data to backend and check for response
 
   onSubmitSignIn = () => {
-    fetch("https://infinite-ocean-88506.herokuapp.com/register", {
-      method: "post",
+    fetch(" your server URL ", {
+      method: "",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: this.state.name,

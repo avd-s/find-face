@@ -17,9 +17,8 @@ const Logo = () => {
       </Tilt>
       <div>
         <p className="white f3">
-          {" "}
           "Welcome To Find Faces , Post an URL of a Pic To Find The Face
-          (single) In It. "{" "}
+          (single) In It. "
         </p>
       </div>
     </div>
